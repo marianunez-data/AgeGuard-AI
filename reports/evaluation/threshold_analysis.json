@@ -1,0 +1,54 @@
+{
+  "analysis": [
+    {
+      "threshold": 21,
+      "far_pct": 28.9,
+      "frr_pct": 7.23,
+      "minors_missed": 87
+    },
+    {
+      "threshold": 22,
+      "far_pct": 24.25,
+      "frr_pct": 9.31,
+      "minors_missed": 73
+    },
+    {
+      "threshold": 23,
+      "far_pct": 18.94,
+      "frr_pct": 13.11,
+      "minors_missed": 57
+    },
+    {
+      "threshold": 24,
+      "far_pct": 15.28,
+      "frr_pct": 16.05,
+      "minors_missed": 46
+    },
+    {
+      "threshold": 25,
+      "far_pct": 12.29,
+      "frr_pct": 20.34,
+      "minors_missed": 37
+    },
+    {
+      "threshold": 26,
+      "far_pct": 9.3,
+      "frr_pct": 23.53,
+      "minors_missed": 28
+    },
+    {
+      "threshold": 27,
+      "far_pct": 8.31,
+      "frr_pct": 27.7,
+      "minors_missed": 25
+    },
+    {
+      "threshold": 28,
+      "far_pct": 6.98,
+      "frr_pct": 31.62,
+      "minors_missed": 21
+    }
+  ],
+  "recommended_threshold": 25,
+  "rationale": "Balance between compliance risk (FAR) and customer experience (FRR)"
+}

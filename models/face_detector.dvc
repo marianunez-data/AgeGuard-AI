@@ -1,0 +1,6 @@
+outs:
+- md5: 568d3bd7b5f98de94a9e8b6a7d1f66c0.dir
+  size: 5379151
+  nfiles: 2
+  hash: md5
+  path: face_detector

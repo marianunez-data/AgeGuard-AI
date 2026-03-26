@@ -1,0 +1,26 @@
+project:
+  name: AgeGuard AI
+  version: 1.0.0
+base_dir: /home/hkr-t/DS_ENVIRONMENT/projects/Artificial-vision-project
+model:
+  name: efficientnetv2_s
+  pretrained: true
+  img_size: 224
+  dropout: 0.3
+training:
+  batch_size: 32
+  epochs: 20
+  lr: 0.0003
+  weight_decay: 0.0001
+  num_workers: 4
+  use_amp: true
+  patience: 5
+data:
+  test_size: 0.15
+  val_size: 0.15
+  seed: 12345
+  expected_samples: 7446
+business:
+  legal_age: 21
+  alert_threshold: 25
+  mae_target: 5.0

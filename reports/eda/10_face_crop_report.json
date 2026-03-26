@@ -1,0 +1,28 @@
+{
+  "run_date": "2026-03-26T11:45:20.835512",
+  "detector": "OpenCV DNN ResNet-10 SSD (Caffe)",
+  "crop_threshold": 0.3,
+  "detection_threshold_eda": 0.7,
+  "margin": 0.4,
+  "target_size": 224,
+  "interpolation": "INTER_AREA",
+  "stats": {
+    "cropped": 7468,
+    "fallback_center": 11,
+    "failed": 0,
+    "fallback_18_25": 3
+  },
+  "fallback_files": [
+    "000149.jpg",
+    "000487.jpg",
+    "000536.jpg",
+    "000919.jpg",
+    "001137.jpg",
+    "002226.jpg",
+    "002535.jpg",
+    "004172.jpg",
+    "005061.jpg",
+    "005415.jpg",
+    "005753.jpg"
+  ]
+}

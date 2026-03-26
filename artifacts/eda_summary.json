@@ -1,0 +1,109 @@
+{
+  "run_date": "2026-03-25T20:09:20.827274",
+  "total_samples": 7590,
+  "age_stats": {
+    "count": 7590.0,
+    "mean": 31.2,
+    "median": 29.0,
+    "std": 17.14,
+    "min": 1.0,
+    "max": 100.0,
+    "p25": 20.0,
+    "p75": 41.0
+  },
+  "resolution": {
+    "width_min": 58,
+    "width_max": 5616,
+    "width_mean": 568.0,
+    "height_min": 66,
+    "height_max": 5624,
+    "height_mean": 629.0,
+    "square_pct": 32.12,
+    "unique_sizes": 3282
+  },
+  "pixel_stats": {
+    "dataset_mean": [
+      0.47540000081062317,
+      0.4131999909877777,
+      0.3815999925136566
+    ],
+    "dataset_std": [
+      0.2612999975681305,
+      0.2442999929189682,
+      0.23659999668598175
+    ],
+    "imagenet_mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "imagenet_std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "delta_mean": [
+      0.009600000455975533,
+      0.04280000180006027,
+      0.024399999529123306
+    ],
+    "use_imagenet_norm": true
+  },
+  "age_bands": {
+    "0-12 (child)": {
+      "count": 815,
+      "pct": 10.74
+    },
+    "13-17 (minor)": {
+      "count": 688,
+      "pct": 9.06
+    },
+    "18-20 (near-legal)": {
+      "count": 551,
+      "pct": 7.26
+    },
+    "21-25 (HIGH RISK)": {
+      "count": 1061,
+      "pct": 13.98
+    },
+    "26-35 (safe)": {
+      "count": 1903,
+      "pct": 25.07
+    },
+    "36-50 (safe)": {
+      "count": 1592,
+      "pct": 20.97
+    },
+    "51-65 (safe)": {
+      "count": 669,
+      "pct": 8.81
+    },
+    "65+ (safe)": {
+      "count": 311,
+      "pct": 4.1
+    }
+  },
+  "color_mode": {
+    "rgb_count": 7532,
+    "grayscale_count": 58,
+    "policy": "convert_to_rgb"
+  },
+  "quality_audit": {
+    "blur_threshold": 80.0,
+    "blur_removal_candidates": 1405,
+    "phash_threshold": 8,
+    "phash_removal_candidates": 38,
+    "no_face_candidates": 110,
+    "face_detection_rate_pct": 98.55,
+    "median_face_coverage": 0.1697
+  },
+  "pipeline_decisions": {
+    "img_size": 224,
+    "normalization": "imagenet",
+    "face_alignment": true,
+    "grayscale_policy": "convert_to_rgb",
+    "blur_threshold": 80.0,
+    "phash_threshold": 8,
+    "estimated_final_n": 6037
+  }
+}

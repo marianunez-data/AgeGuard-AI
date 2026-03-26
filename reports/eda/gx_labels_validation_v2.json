@@ -1,0 +1,44 @@
+{
+  "run_date": "2026-03-25T20:09:57.578169",
+  "suite_version": "v2",
+  "gx_version": "1.15.1",
+  "expected_row_count": 7590,
+  "critical_band_count": 1612,
+  "passed": 8,
+  "total": 8,
+  "all_passed": true,
+  "details": [
+    {
+      "expectation": "expect_column_to_exist",
+      "success": true
+    },
+    {
+      "expectation": "expect_column_values_to_not_be_null",
+      "success": true
+    },
+    {
+      "expectation": "expect_column_values_to_be_unique",
+      "success": true
+    },
+    {
+      "expectation": "expect_column_values_to_match_regex",
+      "success": true
+    },
+    {
+      "expectation": "expect_column_to_exist",
+      "success": true
+    },
+    {
+      "expectation": "expect_column_values_to_not_be_null",
+      "success": true
+    },
+    {
+      "expectation": "expect_column_values_to_be_between",
+      "success": true
+    },
+    {
+      "expectation": "expect_table_row_count_to_equal",
+      "success": true
+    }
+  ]
+}

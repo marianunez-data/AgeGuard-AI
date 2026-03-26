@@ -1,0 +1,16 @@
+{
+  "run_date": "2026-03-26T13:53:06.213031",
+  "phase": "phase3_post_cleanup",
+  "total_samples": 7446,
+  "processed_files_on_disk": 7446,
+  "csv_matches_disk": true,
+  "splits": {
+    "train": 5212,
+    "val": 1117,
+    "test": 1117
+  },
+  "critical_band": 1577,
+  "passed": 12,
+  "total": 12,
+  "all_passed": true
+}

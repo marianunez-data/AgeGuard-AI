@@ -1,0 +1,59 @@
+{
+  "run_date": "2026-03-26T16:58:12.023860",
+  "test_samples": 1117,
+  "global_metrics": {
+    "mae": 5.0239,
+    "rmse": 6.9422,
+    "median_ae": 3.7552,
+    "std_error": 4.791
+  },
+  "per_band_mae": [
+    {
+      "band": "0-17",
+      "n": 218,
+      "mae": 3.69
+    },
+    {
+      "band": "18-25 (critical)",
+      "n": 228,
+      "mae": 4.34
+    },
+    {
+      "band": "26-35",
+      "n": 289,
+      "mae": 4.56
+    },
+    {
+      "band": "36-45",
+      "n": 169,
+      "mae": 5.41
+    },
+    {
+      "band": "46-60",
+      "n": 154,
+      "mae": 6.49
+    },
+    {
+      "band": "60+",
+      "n": 59,
+      "mae": 9.98
+    }
+  ],
+  "business_metrics": {
+    "legal_age": 21,
+    "alert_threshold": 25,
+    "false_accept_rate_pct": 28.9037,
+    "false_accept_count": 87,
+    "false_reject_rate_pct": 7.2304,
+    "false_reject_count": 59,
+    "alert_zone_mae": 4.3382
+  },
+  "accuracy_within": {
+    "1_year": 16.83,
+    "3_years": 42.08,
+    "5_years": 61.06,
+    "10_years": 87.29
+  },
+  "mae_target": 5.0,
+  "gap_to_target": 0.0239
+}

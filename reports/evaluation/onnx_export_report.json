@@ -1,0 +1,19 @@
+{
+  "run_date": "2026-03-26T17:43:23.108287",
+  "onnx_path": "/home/hkr-t/DS_ENVIRONMENT/projects/Artificial-vision-project/models/onnx/ageguard_v1.onnx",
+  "model_size_mb": 77.45,
+  "opset_version": 17,
+  "verification": {
+    "pytorch_output": 35.49067687988281,
+    "onnx_output": 35.49066162109375,
+    "max_diff": 1.52587890625e-05,
+    "match": true
+  },
+  "benchmark": {
+    "n_runs": 100,
+    "avg_latency_ms": 16.68,
+    "fps": 60.0,
+    "target_ms": 50,
+    "target_met": true
+  }
+}

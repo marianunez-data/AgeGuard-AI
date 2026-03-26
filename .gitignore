@@ -1,0 +1,50 @@
+# ── Python ────────────────────────────────
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# ── Virtual environments ─────────────────
+vision_env/
+venv/
+.venv/
+env/
+
+# ── Data (tracked by DVC) ────────────────
+data/final_files/*.jpg
+data/processed/*.jpg
+*.csv
+!configs/*.yaml
+
+# ── Models (tracked by DVC) ──────────────
+models/checkpoints/*.pth
+models/onnx/*.onnx
+models/face_detector/*.caffemodel
+models/face_detector/*.prototxt
+
+# ── IDE ──────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ── Jupyter ──────────────────────────────
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ── OS ───────────────────────────────────
+.DS_Store
+Thumbs.db
+
+# ── DVC ──────────────────────────────────
+/mlruns/
+
+# ── pytest ───────────────────────────────
+.pytest_cache/
+
+# ── Great Expectations ───────────────────
+gx/
+great_expectations/
+uncommitted/

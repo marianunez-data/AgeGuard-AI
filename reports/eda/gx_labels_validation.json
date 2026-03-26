@@ -1,0 +1,42 @@
+{
+  "run_date": "2026-03-24T12:00:30.512668",
+  "dataset": "/home/hkr-t/DS_ENVIRONMENT/projects/Artificial-vision-project/data/labels.csv",
+  "gx_version": "1.15.1",
+  "passed": 8,
+  "total": 8,
+  "all_passed": true,
+  "details": [
+    {
+      "expectation": "expect_column_to_exist",
+      "success": true
+    },
+    {
+      "expectation": "expect_column_values_to_not_be_null",
+      "success": true
+    },
+    {
+      "expectation": "expect_column_values_to_be_unique",
+      "success": true
+    },
+    {
+      "expectation": "expect_column_values_to_match_regex",
+      "success": true
+    },
+    {
+      "expectation": "expect_column_to_exist",
+      "success": true
+    },
+    {
+      "expectation": "expect_column_values_to_not_be_null",
+      "success": true
+    },
+    {
+      "expectation": "expect_column_values_to_be_between",
+      "success": true
+    },
+    {
+      "expectation": "expect_table_row_count_to_equal",
+      "success": true
+    }
+  ]
+}
