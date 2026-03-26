@@ -1,4 +1,4 @@
-# 🛡️ AgeGuard AI — Automated Age Verification System
+# AgeGuard AI — Automated Age Verification System
 
 > Deep learning-powered age estimation for regulated retail environments. Real-time facial analysis with a three-tier alert system (RED/YELLOW/GREEN) for compliance at point of sale.
 
