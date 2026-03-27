@@ -28,7 +28,6 @@ st.markdown("""
     }
     [data-testid="stHeader"] { background: transparent !important; }
     .block-container { padding: 1.5rem 3rem; max-width: 1300px; }
-
     .hero { text-align: center; padding: 2.5rem 0 1rem; }
     .hero h1 {
         font-size: 2.6rem !important; font-weight: 800 !important; letter-spacing: -1.5px;
@@ -38,15 +37,11 @@ st.markdown("""
     }
     .hero p { font-size: 1rem; color: #94a3b8; max-width: 520px; margin: 0 auto; line-height: 1.7; }
     .hero-links { margin-top: 1.2rem; display: flex; justify-content: center; gap: 12px; }
-    .hero-links a {
-        color: #e2e8f0; text-decoration: none; padding: 0.55rem 1.4rem;
-        border-radius: 10px; font-size: 0.85rem; font-weight: 600; transition: all 0.3s;
-    }
+    .hero-links a { color: #e2e8f0; text-decoration: none; padding: 0.55rem 1.4rem; border-radius: 10px; font-size: 0.85rem; font-weight: 600; transition: all 0.3s; }
     .btn-primary { background: linear-gradient(135deg, #6366f1, #8b5cf6); }
     .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(99,102,241,0.3); }
     .btn-secondary { background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); }
     .btn-secondary:hover { background: rgba(255,255,255,0.12); }
-
     .kpi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 1.2rem 0; }
     .kpi {
         background: rgba(255,255,255,0.04); backdrop-filter: blur(10px);
@@ -58,14 +53,12 @@ st.markdown("""
     .kpi-num { font-size: 2.6rem; font-weight: 800; margin: 0.4rem 0 0.15rem; line-height: 1; }
     .kpi-desc { font-size: 0.78rem; color: #64748b; line-height: 1.4; }
     .g { color: #4ade80; } .a { color: #fbbf24; } .b { color: #60a5fa; } .r { color: #f87171; }
-
     .card {
         background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06);
         border-radius: 16px; padding: 1.3rem 1.5rem; margin-bottom: 0.6rem;
     }
     .card-title { font-size: 1.05rem; font-weight: 700; color: #f1f5f9; margin-bottom: 0.2rem; }
     .card-sub { font-size: 0.8rem; color: #64748b; line-height: 1.5; }
-
     .alert-card { border-radius: 14px; padding: 1.4rem; margin-bottom: 0.6rem; transition: transform 0.2s; }
     .alert-card:hover { transform: translateY(-2px); }
     .alert-red { background: linear-gradient(135deg, rgba(239,68,68,0.08), rgba(239,68,68,0.03)); border: 1px solid rgba(239,68,68,0.2); }
@@ -74,7 +67,6 @@ st.markdown("""
     .alert-title { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.3rem; }
     .alert-desc { font-size: 0.82rem; color: #94a3b8; line-height: 1.5; }
     .alert-impact { font-size: 0.72rem; color: #64748b; margin-top: 0.5rem; padding-top: 0.5rem; border-top: 1px solid rgba(255,255,255,0.04); }
-
     .roi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 1rem 0; }
     .roi {
         background: linear-gradient(145deg, rgba(34,197,94,0.06), rgba(34,197,94,0.02));
@@ -84,54 +76,41 @@ st.markdown("""
     .roi:hover { transform: translateY(-2px); }
     .roi-num { font-size: 1.8rem; font-weight: 800; color: #4ade80; }
     .roi-label { font-size: 0.72rem; color: #64748b; margin-top: 0.4rem; line-height: 1.4; }
-
     .insight {
         background: linear-gradient(135deg, rgba(99,102,241,0.08), rgba(99,102,241,0.02));
         border: 1px solid rgba(99,102,241,0.15); border-radius: 12px;
         padding: 1rem 1.3rem; font-size: 0.82rem; color: #a5b4fc; line-height: 1.6; margin: 0.8rem 0;
     }
     .insight strong { color: #818cf8; }
-
     .section-label {
         font-size: 0.7rem; font-weight: 700; color: #475569; text-transform: uppercase;
         letter-spacing: 2px; margin: 2rem 0 0.8rem; padding-bottom: 0.4rem; border-bottom: 1px solid rgba(255,255,255,0.06);
     }
-
     .step-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 1rem 0; }
     .step {
         background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06);
         border-radius: 14px; padding: 1.2rem; text-align: center; transition: all 0.3s;
     }
     .step:hover { background: rgba(255,255,255,0.06); transform: translateY(-2px); }
-    .step-num {
-        font-size: 1.3rem; font-weight: 800; margin-bottom: 0.4rem;
-        background: linear-gradient(135deg, #6366f1, #8b5cf6);
-        -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-    }
+    .step-num { font-size: 1.3rem; font-weight: 800; margin-bottom: 0.4rem; background: linear-gradient(135deg, #6366f1, #8b5cf6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
     .step-title { font-size: 0.85rem; color: #e2e8f0; font-weight: 600; margin-bottom: 0.2rem; }
     .step-desc { font-size: 0.72rem; color: #64748b; }
-
     .footer { text-align: center; color: #334155; font-size: 0.7rem; padding: 2.5rem 0 1rem; }
-
     .stTabs [data-baseweb="tab-list"] { gap: 0; border-bottom: 1px solid rgba(255,255,255,0.06); }
     .stTabs [data-baseweb="tab"] { color: #64748b; font-size: 0.9rem; font-weight: 600; padding: 0.8rem 1.5rem; }
     .stTabs [aria-selected="true"] { color: #e2e8f0 !important; border-bottom-color: #818cf8 !important; }
-
     .thresh-row {
         display: flex; justify-content: space-between; align-items: center;
         padding: 0.55rem 0.8rem; border-radius: 8px; margin-bottom: 4px; font-size: 0.8rem;
-        background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.04);
-        transition: background 0.2s;
+        background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.04); transition: background 0.2s;
     }
     .thresh-row:hover { background: rgba(255,255,255,0.05); }
     .thresh-rec { background: rgba(34,197,94,0.06) !important; border-color: rgba(34,197,94,0.15) !important; }
-
     div[data-testid="stMarkdownContainer"] table { color: #94a3b8; }
     div[data-testid="stMarkdownContainer"] th { color: #64748b; }
 </style>
 """, unsafe_allow_html=True)
 
-# ── Hero ─────────────────────────────────────────────────────────
 st.markdown("""
 <div class="hero">
     <h1>AgeGuard AI</h1>
@@ -143,7 +122,6 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-# ── KPIs ─────────────────────────────────────────────────────────
 st.markdown("""
 <div class="kpi-grid">
     <div class="kpi"><div class="kpi-label">Prediction accuracy</div>
@@ -169,7 +147,7 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-tab1, tab2, tab3, tab4 = st.tabs(["How accurate is it?", "How safe is it?", "How was it built?", "What is the ROI?"])
+tab1, tab2, tab3, tab4 = st.tabs(["How accurate is it?", "How safe is it?", "How was it built?", "Business value"])
 
 CHART_BG = "rgba(0,0,0,0)"
 GRID = "rgba(255,255,255,0.04)"
@@ -229,13 +207,12 @@ with tab2:
                 <span style="color:#f87171;font-weight:500;">{t['far']}%</span>
                 <span style="color:#60a5fa;font-weight:500;">{t['frr']}%</span>
             </div>""", unsafe_allow_html=True)
-
     st.markdown("<div class='section-label'>Alert system</div>", unsafe_allow_html=True)
     p1, p2, p3 = st.columns(3)
     with p1:
         st.markdown("""<div class="alert-card alert-red"><div class="alert-title r">BLOCK</div>
         <div class="alert-desc">Predicted under 21. Sale denied, supervisor alerted.</div>
-        <div class="alert-impact">Prevents fines of $10K-$100K per violation.</div></div>""", unsafe_allow_html=True)
+        <div class="alert-impact">Prevents fines averaging $10K per violation.</div></div>""", unsafe_allow_html=True)
     with p2:
         st.markdown("""<div class="alert-card alert-yellow"><div class="alert-title a">VERIFY</div>
         <div class="alert-desc">Predicted 21-25. Customer asked for physical ID.</div>
@@ -247,7 +224,7 @@ with tab2:
 
 with tab3:
     st.markdown("""<div class="card"><div class="card-title">How the model learned</div>
-    <div class="card-sub">20 training cycles on 5,212 faces. Blue = learning, red = real-world performance.</div></div>""", unsafe_allow_html=True)
+    <div class="card-sub">20 training cycles on 5212 faces. Blue = learning, red = real-world performance.</div></div>""", unsafe_allow_html=True)
     ca, cb = st.columns(2)
     epochs = list(range(1, 21))
     with ca:
@@ -269,7 +246,7 @@ with tab3:
             margin=dict(l=10, r=10, t=40, b=10), xaxis=dict(title="Epoch", gridcolor=GRID),
             yaxis=dict(title="Loss", gridcolor=GRID), legend=dict(orientation="h", y=1.08))
         st.plotly_chart(fig5, use_container_width=True)
-    st.markdown("""<div class="insight"><strong>Training:</strong> 6.2 min on RTX 4080. Best at epoch 19 (5.09 yr). Exported as ONNX (77.5 MB) for cross-platform deployment.</div>""", unsafe_allow_html=True)
+    st.markdown("""<div class="insight"><strong>Training:</strong> 6.2 min on RTX 4080. Best at epoch 19 (5.09 yr). Exported as ONNX (77.5 MB).</div>""", unsafe_allow_html=True)
     st.markdown("<div class='section-label'>Specifications</div>", unsafe_allow_html=True)
     s1, s2 = st.columns(2)
     with s1:
@@ -287,8 +264,8 @@ with tab3:
         st.markdown("""
 | Pipeline | Result |
 |---|---|
-| Raw data | 7,590 images |
-| After QA | 7,446 images |
+| Raw data | 7590 images |
+| After QA | 7446 images |
 | Face crop | 224x224 px, 40% margin |
 | Split | 70/15/15 stratified |
 | Validation | 2 automated gates |
@@ -296,15 +273,24 @@ with tab3:
 """)
 
 with tab4:
-    st.markdown("""<div class="card"><div class="card-title">Why this system pays for itself</div>
-    <div class="card-sub">One violation costs $10K-$100K in fines plus license risk. AgeGuard AI catches what staff miss during rush hours.</div></div>""", unsafe_allow_html=True)
+    st.markdown("""<div class="card"><div class="card-title">System impact on operations</div>
+    <div class="card-sub">One underage sale violation costs an average of $10K in fines. AgeGuard AI adds a consistent verification layer that supports staff during peak hours.</div></div>""", unsafe_allow_html=True)
     st.markdown("""
     <div class="roi-grid">
-        <div class="roi"><div class="roi-num">$85K</div><div class="roi-label">Annual fines avoided per store (2 violations/yr avg)</div></div>
-        <div class="roi"><div class="roi-num">340 hrs</div><div class="roi-label">Staff hours saved (80% auto-approval)</div></div>
-        
-        <div class="roi"><div class="roi-num">17 ms</div><div class="roi-label">Per image (60 FPS live video)</div></div>
-    </div>""", unsafe_allow_html=True)
+        <div class="roi">
+            <div class="roi-num">$20K</div>
+            <div class="roi-label">Estimated annual fines avoided per store based on 2 average violations per year at $10K each</div>
+        </div>
+        <div class="roi">
+            <div class="roi-num">340 hrs</div>
+            <div class="roi-label">Staff hours redirected annually — 79.7% of transactions auto-approved without manual verification</div>
+        </div>
+        <div class="roi">
+            <div class="roi-num">17 ms</div>
+            <div class="roi-label">Per-image processing time — fast enough for 60 frames per second live video with zero checkout delay</div>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
     st.markdown("""<div class="insight"><strong>Business value:</strong> Reduces regulatory liability, supports compliance with age-restricted sale laws, and frees staff to focus on customer service and core business operations.</div>""", unsafe_allow_html=True)
     st.markdown("<div class='section-label'>How it works in your store</div>", unsafe_allow_html=True)
     st.markdown("""
@@ -313,6 +299,7 @@ with tab4:
         <div class="step"><div class="step-num">02</div><div class="step-title">AI analyzes</div><div class="step-desc">Age estimated in 17ms</div></div>
         <div class="step"><div class="step-num">03</div><div class="step-title">Alert triggers</div><div class="step-desc">Green / yellow / red</div></div>
         <div class="step"><div class="step-num">04</div><div class="step-title">Staff acts</div><div class="step-desc">Supervisor verifies flagged</div></div>
-    </div>""", unsafe_allow_html=True)
+    </div>
+    """, unsafe_allow_html=True)
 
 st.markdown("<div class='footer'>AgeGuard AI v1.0 — Retail compliance intelligence</div>", unsafe_allow_html=True)
