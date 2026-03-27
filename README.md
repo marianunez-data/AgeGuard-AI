@@ -15,7 +15,7 @@
 
 ## Business Problem
 
-Retail businesses selling age-restricted products face regulatory fines averaging $10K per violation when minors are not properly identified. Human verification is inconsistent, employees make errors under pressure during rush hours, shift changes, and high-volume periods. AgeGuard AI automates the first layer of age verification, alerting supervisors when a customer's predicted age falls below the safety threshold.
+Retail businesses selling age-restricted products face regulatory fines averaging $10.000 per violation when minors are not properly identified. Human verification is inconsistent, employees make errors under pressure during rush hours, shift changes, and high-volume periods. AgeGuard AI automates the first layer of age verification, alerting supervisors when a customer's predicted age falls below the safety threshold.
 
 ## System Architecture
 ```mermaid
