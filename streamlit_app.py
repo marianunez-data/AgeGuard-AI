@@ -75,7 +75,7 @@ st.markdown("""
     .alert-desc { font-size: 0.82rem; color: #94a3b8; line-height: 1.5; }
     .alert-impact { font-size: 0.72rem; color: #64748b; margin-top: 0.5rem; padding-top: 0.5rem; border-top: 1px solid rgba(255,255,255,0.04); }
 
-    .roi-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 1rem 0; }
+    .roi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 1rem 0; }
     .roi {
         background: linear-gradient(145deg, rgba(34,197,94,0.06), rgba(34,197,94,0.02));
         border: 1px solid rgba(34,197,94,0.15); border-radius: 14px;
@@ -302,10 +302,10 @@ with tab4:
     <div class="roi-grid">
         <div class="roi"><div class="roi-num">$85K</div><div class="roi-label">Annual fines avoided per store (2 violations/yr avg)</div></div>
         <div class="roi"><div class="roi-num">340 hrs</div><div class="roi-label">Staff hours saved (80% auto-approval)</div></div>
-        <div class="roi"><div class="roi-num">< 6 mo</div><div class="roi-label">Payback period on deployment</div></div>
+        
         <div class="roi"><div class="roi-num">17 ms</div><div class="roi-label">Per image (60 FPS live video)</div></div>
     </div>""", unsafe_allow_html=True)
-    st.markdown("""<div class="insight"><strong>Bottom line:</strong> Pays for itself preventing one fine. Reduces liability, demonstrates compliance, frees staff for service.</div>""", unsafe_allow_html=True)
+    st.markdown("""<div class="insight"><strong>Business value:</strong> Reduces regulatory liability, supports compliance with age-restricted sale laws, and frees staff to focus on customer service and core business operations.</div>""", unsafe_allow_html=True)
     st.markdown("<div class='section-label'>How it works in your store</div>", unsafe_allow_html=True)
     st.markdown("""
     <div class="step-grid">
