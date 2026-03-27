@@ -2,12 +2,7 @@
 
 > Deep learning-powered age estimation for regulated retail environments. Real-time facial analysis with a three-tier alert system (RED/YELLOW/GREEN) for compliance at point of sale.
 
-![Python](https://img.shields.io/badge/Python-3.12-blue)
-![PyTorch](https://img.shields.io/badge/PyTorch-2.x-red)
-![ONNX](https://img.shields.io/badge/ONNX-Runtime-green)
-![Tests](https://img.shields.io/badge/Tests-21%2F21_passing-brightgreen)
-![MAE](https://img.shields.io/badge/MAE-5.02_years-orange)
-![Inference](https://img.shields.io/badge/Inference-17ms-blue)
+![CI — AgeGuard AI](https://github.com/marianunez-data/AgeGuard-AI/actions/workflows/ci.yml/badge.svg) ![tests](https://img.shields.io/badge/tests-21_passed-brightgreen) ![MAE](https://img.shields.io/badge/MAE-5.02-blue) ![API](https://img.shields.io/badge/API-live-brightgreen) ![Dashboard](https://img.shields.io/badge/Dashboard-live-brightgreen)
 
 ### [Live Demo](https://huggingface.co/spaces/marianunez-data/AgeGuard-AI) | [Dashboard](https://ageguard-ai-dashboard.streamlit.app) | [API](https://ageguard-ai.onrender.com/docs)
 
