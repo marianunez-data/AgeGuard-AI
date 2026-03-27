@@ -35,3 +35,7 @@ uvicorn>=0.23.0
 
 # ── Data Versioning ──────────────────────
 dvc>=3.0.0
+
+# ── Web Framework ──────────────────────
+streamlit>=1.30.0
+plotly>=5.18.0
