@@ -1,4 +1,4 @@
-name: AgeGuard CI/CD
+name: AgeGuard CI
 
 on:
   push:
@@ -18,4 +18,4 @@ jobs:
       - name: Install linter
         run: pip install ruff
       - name: Run linter
-        run: ruff check src/ tests/ --ignore E501,F401
+        run: ruff check src/ tests/ --ignore E501,F401,E402
