@@ -163,6 +163,10 @@ python -m pytest tests/ -v
 4. Face detector: OpenCV DNN SSD has 41.8% false rejection at threshold 0.7.
 5. No adversarial robustness: not tested against deliberate evasion (heavy makeup, prosthetics).
 
+## Fairness Considerations
+
+This model was trained on UTKFace which has demographic imbalances. No fairness analysis was performed across gender, ethnicity, or skin tone. Before production deployment, it is essential to evaluate prediction accuracy across demographic groups to ensure the system does not disproportionately flag or miss specific populations. This is a documented next step.
+
 ## Future Improvements
 
 - [ ] Face alignment with landmark detection (dlib/MTCNN) to normalize eye-line orientation
