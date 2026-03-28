@@ -4,7 +4,7 @@
 
 ![CI — AgeGuard AI](https://github.com/marianunez-data/AgeGuard-AI/actions/workflows/ci.yml/badge.svg) ![tests](https://img.shields.io/badge/tests-21_passed-brightgreen) ![MAE](https://img.shields.io/badge/MAE-5.02-blue) ![API](https://img.shields.io/badge/API-live-brightgreen) ![Dashboard](https://img.shields.io/badge/Dashboard-live-brightgreen)
 
-### [Live Demo](https://huggingface.co/spaces/marianunez-data/AgeGuard-AI) | [Dashboard](https://ageguard-ai-dashboard.streamlit.app) | [API](https://ageguard-ai.onrender.com/docs)
+### [Notebook](https://nbviewer.org/github/marianunez-data/AgeGuard-AI/blob/main/notebooks/AgeGuard-AI.ipynb) | [Live Demo](https://huggingface.co/spaces/marianunez-data/AgeGuard-AI) | [Dashboard](https://ageguard-ai-dashboard.streamlit.app) | [API](https://ageguard-ai.onrender.com/docs)
 
 ---
 
