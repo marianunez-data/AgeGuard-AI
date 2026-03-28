@@ -1,0 +1,11 @@
+.venv/
+vision_env/
+.git/
+.dvc/
+notebooks/
+reports/
+tests/
+__pycache__/
+*.ipynb
+.pytest_cache/
+.ruff_cache/
