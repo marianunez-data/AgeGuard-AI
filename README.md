@@ -180,6 +180,6 @@ This model was trained on UTKFace which has demographic imbalances. No fairness 
 
 **Validation:** Great Expectations, Pydantic, pytest
 
-**Deployment:** FastAPI, Gradio, Streamlit, Docker, Render, HuggingFace Spaces
+**Deployment:** FastAPI, Gradio, Streamlit, Docker, HuggingFace Spaces
 
 **MLOps:** DVC (data versioning), GitHub Actions (CI/CD), YAML config
