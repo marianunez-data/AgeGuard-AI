@@ -172,7 +172,7 @@ This model was trained on UTKFace which has demographic imbalances. No fairness 
 
 ## Tech Stack
 
-**ML/DL:** PyTorch, EfficientNetV2-S, ONNX Runtime, torchvision
+**Deep Learning:** PyTorch, EfficientNetV2-S, ONNX Runtime, torchvision
 
 **Computer Vision:** OpenCV DNN (face detection + cropping), GradCAM
 
