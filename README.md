@@ -78,10 +78,15 @@ AgeGuard-AI/
 ```
 
 ## Quick Start
+
 ```bash
 git clone https://github.com/marianunez-data/AgeGuard-AI.git
 cd AgeGuard-AI
 pip install -r requirements.txt
+```
+
+Model weights are hosted on HuggingFace and downloaded automatically when running the API.
+Manual download: https://huggingface.co/spaces/marianunez-data/AgeGuard-AI/tree/main/models/onnx
 ```
 
 ### Predict age from image
