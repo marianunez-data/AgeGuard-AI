@@ -188,3 +188,9 @@ This model was trained on UTKFace which has demographic imbalances. No fairness 
 **Deployment:** FastAPI, Gradio, Streamlit, Docker, HuggingFace Spaces
 
 **MLOps:** DVC (data versioning), GitHub Actions (CI/CD), YAML config
+
+## Author
+
+**Maria Camila Gonzalez Nuñez**
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-marianunez--data-blue?style=flat&logo=linkedin)](https://www.linkedin.com/in/marianunez-data)
