@@ -27,6 +27,7 @@ class TrainingCfg(BaseModel):
     num_workers: int = Field(4, ge=0)
     use_amp: bool = True
     patience: int = Field(5, gt=0)
+    huber_delta: float = Field(1.0, gt=0)
 
 
 class DataCfg(BaseModel):
