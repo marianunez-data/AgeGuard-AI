@@ -125,7 +125,7 @@ python -m pytest tests/ -v
 | Decision | Chose | Over | Why |
 |---|---|---|---|
 | Architecture | EfficientNetV2-S (20.3M params) | ResNet50, MobileNetV3 | Selected for balance between parameter count and inference speed. 20.3M params with 17ms latency meets the <50ms real-time requirement while maintaining MAE 5.02 |
-| Loss function | HuberLoss (delta 5.0) | MSE, MAE | MSE destabilizes on mislabeled samples (found 1+ in UTKFace). MAE loses fine gradient signal. Huber with delta=5.0 gives MSE precision below 5yr error and MAE robustness above |
+| Loss function | HuberLoss (delta 1.0) | MSE, MAE | MSE destabilizes on mislabeled samples (found 1+ in UTKFace). MAE loses fine gradient signal. Huber with delta=1.0 gives MSE precision below 5yr error and MAE robustness above |
 | Face detector | OpenCV DNN SSD | MediaPipe | MediaPipe broke API in v0.10.13+ (experienced during development). SSD was a reliable fallback that worked for face cropping |
 | Alert threshold | 25 years | 21, 23, 28 | Tested all thresholds in Phase 5. At 21: FAR 28.9%. At 25: FAR 12.3% with FRR 20.3%. Best balance between compliance risk and customer experience |
 | Export format | ONNX | TorchScript | ONNX selected for cross-platform compatibility. Achieved 17ms inference on CPU in our benchmark |
@@ -141,7 +141,7 @@ python -m pytest tests/ -v
 | Extreme lighting | Prediction less accurate | ColorJitter augmentation during training improves robustness to lighting variation |
 | Multiple faces | Processes full image without selection | Production version would use face detection to isolate individual faces |
 | Adversarial input (makeup, disguise) | Age prediction may be incorrect | Known limitation: human verification layer is the safeguard |
-| Mislabeled training data | Model learns incorrect patterns | HuberLoss (delta 5.0) reduces impact. At least 1 mislabel confirmed in Phase 3 |
+| Mislabeled training data | Model learns incorrect patterns | HuberLoss (delta 1.0) reduces impact. At least 1 mislabel confirmed in Phase 3 |
 | Model drift | Accuracy degrades over time | Not implemented. Recommendation: monitor MAE on new data and retrain periodically |
 | Server overload | Slow or failed predictions | Health endpoint enables monitoring. Production would use auto-scaling |
 

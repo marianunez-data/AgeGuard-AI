@@ -132,7 +132,7 @@ def train(cfg, model, loaders, device):
     model = model.to(device)
 
     # Loss: Huber is robust to label noise
-    criterion = nn.HuberLoss(delta=5.0)
+    criterion = nn.HuberLoss(delta=1.0)
 
     # Optimizer
     optimizer = torch.optim.AdamW(
@@ -196,7 +196,7 @@ def train(cfg, model, loaders, device):
     print(f"  Weight decay    : {cfg.training.weight_decay}")
     print(f"  AMP             : {cfg.training.use_amp}")
     print(f"  Patience        : {cfg.training.patience}")
-    print("  Loss            : HuberLoss (delta=5.0)")
+    print("  Loss            : HuberLoss (delta=1.0)")
     print("  Optimizer       : AdamW")
     print("  Scheduler       : CosineAnnealingLR")
     print()
@@ -314,7 +314,7 @@ def train(cfg, model, loaders, device):
             "weight_decay": cfg.training.weight_decay,
             "patience": cfg.training.patience,
             "use_amp": cfg.training.use_amp,
-            "loss": "HuberLoss_delta5.0",
+            "loss": "HuberLoss_delta1.0",
             "optimizer": "AdamW",
             "scheduler": "CosineAnnealingLR",
         },
