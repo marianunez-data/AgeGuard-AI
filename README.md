@@ -116,7 +116,7 @@ python -m pytest tests/ -v
 | 1. Setup | Project structure, Pydantic config, YAML | config.py, base_config.yaml |
 | 2. EDA | 11 audits: age distribution, resolution, blur, duplicates, face detection | eda_summary.json, 17+ reports |
 | 3. Preprocessing | Visual review, face crop, grayscale conversion, stratified split | 7446 clean images (224x224) |
-| 4. Training | EfficientNetV2-S, HuberLoss(d=5.0), CosineAnnealing, AMP | best_model.pth, MAE 5.09 (val) |
+| 4. Training | EfficientNetV2-S, HuberLoss(d=1.0), CosineAnnealing, AMP | best_model.pth, MAE 5.09 (val) |
 | 5. Evaluation | Test metrics, per-band MAE, FAR/FRR threshold optimization | test_evaluation.json |
 | 6. Explainability | GradCAM visualization + ONNX export + live demo | ageguard_v1.onnx, GradCAM heatmaps |
 
