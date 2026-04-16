@@ -15,6 +15,7 @@ training:
   num_workers: 4
   use_amp: true
   patience: 5
+  huber_delta: 5.0
 data:
   test_size: 0.15
   val_size: 0.15
