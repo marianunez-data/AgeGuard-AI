@@ -7,7 +7,6 @@
 #    - Pretrained ImageNet weights (confirmed in EDA: delta < 0.05)
 #    - Dropout from config (default 0.3)
 #    - Single output neuron (regression, not classification)
-#    - ReLU on output: age is always positive
 # ══════════════════════════════════════════════════════════════════
 import torch.nn as nn
 from torchvision import models
