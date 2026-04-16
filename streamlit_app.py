@@ -254,7 +254,7 @@ with tab3:
 | Component | Detail |
 |---|---|
 | Architecture | EfficientNetV2-S (20.3M params) |
-| Loss | HuberLoss (delta 5.0) |
+| Loss | HuberLoss (delta 1.0) |
 | Optimizer | AdamW (lr 3e-4) |
 | Training | 20 epochs, RTX 4080, 6.2 min |
 | Export | ONNX (77.5 MB) |
