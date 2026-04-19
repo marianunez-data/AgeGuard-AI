@@ -4,7 +4,7 @@
 
 ![CI — AgeGuard AI](https://github.com/marianunez-data/AgeGuard-AI/actions/workflows/ci.yml/badge.svg) ![tests](https://img.shields.io/badge/tests-21_passed-brightgreen) ![MAE](https://img.shields.io/badge/MAE-5.02-blue) ![API](https://img.shields.io/badge/API-live-brightgreen) ![Dashboard](https://img.shields.io/badge/Dashboard-live-brightgreen)
 
-### [Notebook](https://nbviewer.org/github/marianunez-data/AgeGuard-AI/blob/main/notebooks/AgeGuard-AI.ipynb) | [Live Demo](https://huggingface.co/spaces/marianunez-data/AgeGuard-AI) | [Dashboard](https://ageguard-ai-dashboard.streamlit.app) | [API](https://ageguard-ai.onrender.com/docs)
+### [Live Demo](https://huggingface.co/spaces/marianunez-data/AgeGuard-AI) | [Dashboard](https://ageguard-ai-dashboard.streamlit.app) | [API](https://ageguard-ai.onrender.com/docs)
 
 ---
 
@@ -30,23 +30,23 @@ flowchart LR
 
 ## Key Results
 
-| Metric | Value | Target |
-|---|---|---|
-| Test MAE (global) | 5.02 years | <= 5.0 |
-| Test MAE (18-25 critical) | 4.34 years | <= 5.0 |
-| False Accept Rate (threshold 25) | 12.3% | Minimized |
-| False Reject Rate (threshold 25) | 20.3% | Acceptable |
-| Inference latency | 16.7 ms | < 50 ms |
-| Adult auto-approval | 79.7% | Maximized |
-| Model size (ONNX) | 77.5 MB | Deployable |
+| Metric                           | Value      | Target     |
+| -------------------------------- | ---------- | ---------- |
+| Test MAE (global)                | 5.02 years | <= 5.0     |
+| Test MAE (18-25 critical)        | 4.34 years | <= 5.0     |
+| False Accept Rate (threshold 25) | 12.3%      | Minimized  |
+| False Reject Rate (threshold 25) | 20.3%      | Acceptable |
+| Inference latency                | 16.7 ms    | < 50 ms    |
+| Adult auto-approval              | 79.7%      | Maximized  |
+| Model size (ONNX)                | 77.5 MB    | Deployable |
 
 ## Deployed Services
 
-| Platform | URL | Purpose |
-|---|---|---|
+| Platform           | URL                                                                    | Purpose                               |
+| ------------------ | ---------------------------------------------------------------------- | ------------------------------------- |
 | HuggingFace Spaces | [Live Demo](https://huggingface.co/spaces/marianunez-data/AgeGuard-AI) | Interactive demo: upload a face image |
-| Streamlit Cloud | [Dashboard](https://ageguard-ai-dashboard.streamlit.app) | Business intelligence dashboard |
-| Render | [API](https://ageguard-ai.onrender.com/docs) | Production REST API (FastAPI) |
+| Streamlit Cloud    | [Dashboard](https://ageguard-ai-dashboard.streamlit.app)               | Business intelligence dashboard       |
+| Render             | [API](https://ageguard-ai.onrender.com/docs)                           | Production REST API (FastAPI)         |
 
 ## Project Structure
 ```
@@ -111,39 +111,39 @@ python -m pytest tests/ -v
 
 ## Pipeline Phases
 
-| Phase | Description | Key Output |
-|---|---|---|
-| 1. Setup | Project structure, Pydantic config, YAML | config.py, base_config.yaml |
-| 2. EDA | 11 audits: age distribution, resolution, blur, duplicates, face detection | eda_summary.json, 17+ reports |
-| 3. Preprocessing | Visual review, face crop, grayscale conversion, stratified split | 7446 clean images (224x224) |
-| 4. Training | EfficientNetV2-S, HuberLoss(d=1.0), CosineAnnealing, AMP | best_model.pth, MAE 5.09 (val) |
-| 5. Evaluation | Test metrics, per-band MAE, FAR/FRR threshold optimization | test_evaluation.json |
-| 6. Explainability | GradCAM visualization + ONNX export + live demo | ageguard_v1.onnx, GradCAM heatmaps |
+| Phase             | Description                                                               | Key Output                         |
+| ----------------- | ------------------------------------------------------------------------- | ---------------------------------- |
+| 1. Setup          | Project structure, Pydantic config, YAML                                  | config.py, base_config.yaml        |
+| 2. EDA            | 11 audits: age distribution, resolution, blur, duplicates, face detection | eda_summary.json, 17+ reports      |
+| 3. Preprocessing  | Visual review, face crop, grayscale conversion, stratified split          | 7446 clean images (224x224)        |
+| 4. Training       | EfficientNetV2-S, HuberLoss(d=1.0), CosineAnnealing, AMP                  | best_model.pth, MAE 5.09 (val)     |
+| 5. Evaluation     | Test metrics, per-band MAE, FAR/FRR threshold optimization                | test_evaluation.json               |
+| 6. Explainability | GradCAM visualization + ONNX export + live demo                           | ageguard_v1.onnx, GradCAM heatmaps |
 
 ## Technical Decisions and Trade-offs
 
-| Decision | Chose | Over | Why |
-|---|---|---|---|
-| Architecture | EfficientNetV2-S (20.3M params) | ResNet50, MobileNetV3 | Selected for balance between parameter count and inference speed. 20.3M params with 17ms latency meets the <50ms real-time requirement while maintaining MAE 5.02 |
-| Loss function | HuberLoss (delta 1.0) | MSE, MAE | MSE destabilizes on mislabeled samples (found 1+ in UTKFace). MAE loses fine gradient signal. Huber with delta=1.0 gives MSE precision below 5yr error and MAE robustness above |
-| Face detector | OpenCV DNN SSD | MediaPipe | MediaPipe broke API in v0.10.13+ (experienced during development). SSD was a reliable fallback that worked for face cropping |
-| Alert threshold | 25 years | 21, 23, 28 | Tested all thresholds in Phase 5. At 21: FAR 28.9%. At 25: FAR 12.3% with FRR 20.3%. Best balance between compliance risk and customer experience |
-| Export format | ONNX | TorchScript | ONNX selected for cross-platform compatibility. Achieved 17ms inference on CPU in our benchmark |
-| Normalization | ImageNet stats | Custom stats | EDA confirmed dataset pixel distribution within 0.05 of ImageNet means: preserves transfer learning benefits |
-| Face crop margin | 40% | — | Standard margin for face detection crops. Captures full face with surrounding context for age-relevant features |
-| Blur handling | Remove only Lap < 20 | Remove all (Lap < 80), Keep all | Tested in Phase 3: removing all 1385 loses 23.5% of 18-25 band. Lap < 20 removes only 33 genuinely unusable images |
+| Decision         | Chose                           | Over                            | Why                                                                                                                                                                             |
+| ---------------- | ------------------------------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Architecture     | EfficientNetV2-S (20.3M params) | ResNet50, MobileNetV3           | Selected for balance between parameter count and inference speed. 20.3M params with 17ms latency meets the <50ms real-time requirement while maintaining MAE 5.02               |
+| Loss function    | HuberLoss (delta 1.0)           | MSE, MAE                        | MSE destabilizes on mislabeled samples (found 1+ in UTKFace). MAE loses fine gradient signal. Huber with delta=1.0 gives MSE precision below 5yr error and MAE robustness above |
+| Face detector    | OpenCV DNN SSD                  | MediaPipe                       | MediaPipe broke API in v0.10.13+ (experienced during development). SSD was a reliable fallback that worked for face cropping                                                    |
+| Alert threshold  | 25 years                        | 21, 23, 28                      | Tested all thresholds in Phase 5. At 21: FAR 28.9%. At 25: FAR 12.3% with FRR 20.3%. Best balance between compliance risk and customer experience                               |
+| Export format    | ONNX                            | TorchScript                     | ONNX selected for cross-platform compatibility. Achieved 17ms inference on CPU in our benchmark                                                                                 |
+| Normalization    | ImageNet stats                  | Custom stats                    | EDA confirmed dataset pixel distribution within 0.05 of ImageNet means: preserves transfer learning benefits                                                                    |
+| Face crop margin | 40%                             | —                               | Standard margin for face detection crops. Captures full face with surrounding context for age-relevant features                                                                 |
+| Blur handling    | Remove only Lap < 20            | Remove all (Lap < 80), Keep all | Tested in Phase 3: removing all 1385 loses 23.5% of 18-25 band. Lap < 20 removes only 33 genuinely unusable images                                                              |
 
 ## Failure Modes
 
-| Failure | Impact | Mitigation |
-|---|---|---|
-| No face in image | Model outputs meaningless prediction | Validates image loading. Production improvement: add face detection pre-check |
-| Extreme lighting | Prediction less accurate | ColorJitter augmentation during training improves robustness to lighting variation |
-| Multiple faces | Processes full image without selection | Production version would use face detection to isolate individual faces |
-| Adversarial input (makeup, disguise) | Age prediction may be incorrect | Known limitation: human verification layer is the safeguard |
-| Mislabeled training data | Model learns incorrect patterns | HuberLoss (delta 1.0) reduces impact. At least 1 mislabel confirmed in Phase 3 |
-| Model drift | Accuracy degrades over time | Not implemented. Recommendation: monitor MAE on new data and retrain periodically |
-| Server overload | Slow or failed predictions | Health endpoint enables monitoring. Production would use auto-scaling |
+| Failure                              | Impact                                 | Mitigation                                                                         |
+| ------------------------------------ | -------------------------------------- | ---------------------------------------------------------------------------------- |
+| No face in image                     | Model outputs meaningless prediction   | Validates image loading. Production improvement: add face detection pre-check      |
+| Extreme lighting                     | Prediction less accurate               | ColorJitter augmentation during training improves robustness to lighting variation |
+| Multiple faces                       | Processes full image without selection | Production version would use face detection to isolate individual faces            |
+| Adversarial input (makeup, disguise) | Age prediction may be incorrect        | Known limitation: human verification layer is the safeguard                        |
+| Mislabeled training data             | Model learns incorrect patterns        | HuberLoss (delta 1.0) reduces impact. At least 1 mislabel confirmed in Phase 3     |
+| Model drift                          | Accuracy degrades over time            | Not implemented. Recommendation: monitor MAE on new data and retrain periodically  |
+| Server overload                      | Slow or failed predictions             | Health endpoint enables monitoring. Production would use auto-scaling              |
 
 ## Data Quality Measures
 
