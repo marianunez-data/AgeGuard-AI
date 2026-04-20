@@ -3,7 +3,6 @@ import os
 import time
 import urllib.request
 from pathlib import Path
-
 import numpy as np
 from fastapi import FastAPI, UploadFile, File
 from fastapi.responses import JSONResponse

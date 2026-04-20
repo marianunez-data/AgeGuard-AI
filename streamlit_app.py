@@ -215,11 +215,11 @@ with tab2:
         <div class="alert-impact">Prevents fines averaging $10K per violation.</div></div>""", unsafe_allow_html=True)
     with p2:
         st.markdown("""<div class="alert-card alert-yellow"><div class="alert-title a">VERIFY</div>
-        <div class="alert-desc">Predicted 21-25. Customer asked for physical ID.</div>
+        <div class="alert-desc">Predicted 21-24. Customer asked for physical ID.</div>
         <div class="alert-impact">5 seconds. No revenue impact.</div></div>""", unsafe_allow_html=True)
     with p3:
         st.markdown("""<div class="alert-card alert-green"><div class="alert-title g">APPROVED</div>
-        <div class="alert-desc">Predicted over 25. Sale approved automatically.</div>
+        <div class="alert-desc">Predicted 25 or above. Sale approved automatically.</div>
         <div class="alert-impact">Covers 79.7% of adult customers.</div></div>""", unsafe_allow_html=True)
 
 with tab3:
@@ -297,7 +297,7 @@ with tab4:
     <div class="step-grid">
         <div class="step"><div class="step-num">01</div><div class="step-title">Camera captures</div><div class="step-desc">Self-checkout detects face</div></div>
         <div class="step"><div class="step-num">02</div><div class="step-title">AI analyzes</div><div class="step-desc">Age estimated in 17ms</div></div>
-        <div class="step"><div class="step-num">03</div><div class="step-title">Alert triggers</div><div class="step-desc">Green / yellow / red</div></div>
+        <div class="step"><div class="step-num">03</div><div class="step-title">Alert triggers</div><div class="step-desc">Block / Verify / Approve</div></div>
         <div class="step"><div class="step-num">04</div><div class="step-title">Staff acts</div><div class="step-desc">Supervisor verifies flagged</div></div>
     </div>
     """, unsafe_allow_html=True)

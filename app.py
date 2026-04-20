@@ -93,7 +93,7 @@ with gr.Blocks(
         <strong>How it works:</strong> EfficientNetV2-S analyzes facial features (skin texture, bone structure, wrinkles) to estimate age.
         Trained on 7,446 face-cropped images · MAE: 5.02 years · Inference: ~17ms
         <br><br>
-        🔴 <strong>RED</strong> (< 21): Block sale | 🟡 <strong>YELLOW</strong> (21-25): Request ID | 🟢 <strong>GREEN</strong> (> 25): Approve sale
+        🔴 <strong>BLOCK</strong> (&lt; 21): Deny sale | 🟡 <strong>VERIFY</strong> (21-24): Request ID | 🟢 <strong>APPROVED</strong> (&ge; 25): Approve sale
     </div>
     """
     )
